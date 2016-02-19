@@ -40,7 +40,7 @@ namespace Playground
         static bool IsBusinessDay(DateTime date)
         {
             //TODO add holidays
-            return date.DayOfWeek == DayOfWeek.Saturday || date.DayOfWeek == DayOfWeek.Sunday;
+            return date.DayOfWeek != DayOfWeek.Saturday && date.DayOfWeek != DayOfWeek.Sunday;
         }
 
         static DateTime GetNextBusinessDay(DateTime date)
